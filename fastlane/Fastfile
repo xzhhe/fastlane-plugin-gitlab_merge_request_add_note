@@ -1,0 +1,11 @@
+fastlane_require 'pp'
+
+lane :test do
+  pp gitlab_merge_request_add_note(
+    host: 'https://git.in.xxx.com/api/v4',
+    private_token: 'xxx',
+    project_id: '16456',
+    mr_id: '33',
+    comment: 'hello'
+  )
+end
